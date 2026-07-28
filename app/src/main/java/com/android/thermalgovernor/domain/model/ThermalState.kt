@@ -4,7 +4,7 @@ sealed class ThermalState {
     
     // data class (needs unique value)
     data class Cool(val tempCelsius: Float) : ThermalState() {
-        val message = "not developed"
+        val warningMessage = "SoC is cool ($tempCelsius°C). Nothing to be done."
     }
     
     data class Warm(val tempCelsius: Float) : ThermalState() {
