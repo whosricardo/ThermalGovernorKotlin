@@ -11,4 +11,10 @@ class ThermalRepository(
             hardwarePropertiesManager.TEMPERATURE_CURRENT
         )
     }
+
+    fun getGpuTemperatures(): FloatArray {
+        return hardwarePropertiesManager.getDeviceTemperatures(
+            hardwarePropertiesManager.DEVICE_TEMPERATURE_GPU,
+            hardwarePropertiesManager.TEMPERATURE_CURRENT
+    }
 }
