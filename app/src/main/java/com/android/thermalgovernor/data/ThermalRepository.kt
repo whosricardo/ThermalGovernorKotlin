@@ -7,21 +7,22 @@ class ThermalRepository(
 ) {
     fun getCpuTemperatures(): FloatArray {
         return hardwarePropertiesManager.getDeviceTemperatures(
-            hardwarePropertiesManager.DEVICE_TEMPERATURE_CPU,
-            hardwarePropertiesManager.TEMPERATURE_CURRENT
+            HardwarePropertiesManager.DEVICE_TEMPERATURE_CPU,
+            HardwarePropertiesManager.TEMPERATURE_CURRENT
         )
     }
 
     fun getGpuTemperatures(): FloatArray {
         return hardwarePropertiesManager.getDeviceTemperatures(
-            hardwarePropertiesManager.DEVICE_TEMPERATURE_GPU,
-            hardwarePropertiesManager.TEMPERATURE_CURRENT
+            HardwarePropertiesManager.DEVICE_TEMPERATURE_GPU,
+            HardwarePropertiesManager.TEMPERATURE_CURRENT
+        )
     }
 
     fun getBatteryTemperatures(): FloatArray {
         return hardwarePropertiesManager.getDeviceTemperatures(
-            hardwarePropertiesManager.DEVICE_TEMPERATURE_BATTERY,
-            hardwarePropertiesManager.TEMPERATURE_CURRENT
+            HardwarePropertiesManager.DEVICE_TEMPERATURE_BATTERY,
+            HardwarePropertiesManager.TEMPERATURE_CURRENT
         )
     }
 }
